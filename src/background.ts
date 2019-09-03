@@ -9,6 +9,11 @@ chrome.webRequest.onBeforeRequest.addListener(
       cancel: true
     }
   },
-  { urls: ["<all_urls>"] },
+  {
+    urls: [
+      "*://developer.chrome.com/*",
+      "*://*.getpocket.com/"
+    ]
+  },
   ["blocking"]
 )

@@ -3,5 +3,10 @@ chrome.webRequest.onBeforeRequest.addListener((request) => {
     return {
         cancel: true
     };
-}, { urls: ["<all_urls>"] }, ["blocking"]);
+}, {
+    urls: [
+        "*://developer.chrome.com/*",
+        "*://*.getpocket.com/"
+    ]
+}, ["blocking"]);
 //# sourceMappingURL=background.js.map
